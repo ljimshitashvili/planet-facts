@@ -8,6 +8,7 @@ interface Props {
   active: boolean;
   planetInfo?: PlanetTypes[];
   key?: number;
+  source?: PlanetTypes;
 }
 
 export default function BurgerMenu({ active, planetInfo }: Props) {
@@ -19,7 +20,9 @@ export default function BurgerMenu({ active, planetInfo }: Props) {
             <Circle className="circle" name={planet.name} />
             <p>{planet.name}</p>
           </div>
-          <img src={arrow} alt="Source Icon" />
+          <a href={planet.overview.source}>
+            <img src={arrow} alt="Source Icon" />
+          </a>
           <Hr name={planet.name} />
         </div>
       ))}
