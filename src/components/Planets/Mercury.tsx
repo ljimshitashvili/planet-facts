@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Route, Routes, Link } from "react-router-dom";
 import Overview from "./Overview";
 import PlanetTypes from "../../types";
+import Structure from "./Structure";
+import Surface from "./Surface";
 
 interface Props {
   planetInfo: PlanetTypes[];
@@ -21,8 +23,14 @@ export default function Mercury({ planetInfo }: Props) {
           path="overview"
           element={<Overview planetInfo={planetInfo} />}
         ></Route>
-        <Route path="structure"></Route>
-        <Route path="surface"></Route>
+        <Route
+          path="structure"
+          element={<Structure planetInfo={planetInfo} />}
+        ></Route>
+        <Route
+          path="surface"
+          element={<Surface planetInfo={planetInfo} />}
+        ></Route>
       </Routes>
     </Container>
   );

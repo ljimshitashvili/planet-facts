@@ -5,4 +5,6 @@ export default interface PlanetTypes {
   revolution: string;
   rotation: string;
   temperature: string;
+  structure: { source: string; content: string };
+  geology: { source: string; content: string };
 }
