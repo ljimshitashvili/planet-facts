@@ -9,16 +9,19 @@ import bgImage from "./assets/background-stars.svg";
 
 export default function App() {
   const [active, setactive] = useState<boolean>(true);
-  console.log(active);
+  const [planetInfo, setPlanetInfo] = useState<Array<object> | []>([]);
 
   useEffect(() => {
     const planetInfo = async () => {
-      const response = await axios.get("./assets/data.json");
+      const response = await axios.get(
+        "https://raw.githubusercontent.com/ljimshitashvili/planet-facts/master/src/assets/data.json"
+      );
       const data = response.data;
-      console.log(data);
+      setPlanetInfo(data);
     };
     planetInfo;
   }, []);
+  console.log(planetInfo);
 
   return (
     <Background>
