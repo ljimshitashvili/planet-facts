@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import burgerIcon from "../assets/icon-hamburger.svg";
+import burgerIcon from "../../assets/icon-hamburger.svg";
 
 interface Props {
   active: boolean;
@@ -27,6 +27,7 @@ const Background = styled.div<Props>`
   align-items: center;
   padding: 16px 24px;
   position: relative;
+  width: 100%;
 
   h1 {
     font-family: "Antonio";

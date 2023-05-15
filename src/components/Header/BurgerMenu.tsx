@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-import arrow from "../assets/icon-source.svg";
+import arrow from "../../assets/icon-source.svg";
 
-import PlanetTypes from "../types";
+import PlanetTypes from "../../types";
 
 interface Props {
   active: boolean;
@@ -15,7 +16,11 @@ export default function BurgerMenu({ active, planetInfo }: Props) {
   return (
     <Background active={active}>
       {planetInfo?.map((planet, index) => (
-        <div key={index} className="planet">
+        <Link
+          to={`${planet.name.toLowerCase()}/overview`}
+          key={index}
+          className="planet"
+        >
           <div>
             <Circle className="circle" name={planet.name} />
             <p>{planet.name}</p>
@@ -24,7 +29,7 @@ export default function BurgerMenu({ active, planetInfo }: Props) {
             <img src={arrow} alt="Source Icon" />
           </a>
           <Hr name={planet.name} />
-        </div>
+        </Link>
       ))}
     </Background>
   );
@@ -34,13 +39,15 @@ const Background = styled.div<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
+  top: ${(p) => (p.active ? "60px" : "60px")};
   left: ${(p) => (p.active ? "100%" : "0")};
   position: ${(p) => (p.active ? "fixed" : "absolute")};
   width: 100%;
   transition: all 0.2s;
   background: #070724;
   flex: 1;
-  min-height: 89.8%;
+  height: 100%;
+  z-index: 1;
 
   .planet {
     display: flex;
@@ -50,6 +57,7 @@ const Background = styled.div<Props>`
     padding: 22px 24px;
     margin-bottom: ${(p) => (p.key === 7 ? "none" : "1px")};
     position: relative;
+    text-decoration: none;
 
     div {
       display: flex;

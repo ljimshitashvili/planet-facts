@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-import BurgerMenu from "./components/BurgerMenu";
+import Header from "./components/Header/Header";
+import BurgerMenu from "./components/Header/BurgerMenu";
 
 import bgImage from "./assets/background-stars.svg";
 
 import PlanetTypes from "./types";
+import Mercury from "./components/Planets/Mercury";
 
 export default function App() {
   const [active, setactive] = useState<boolean>(true);
@@ -24,8 +26,16 @@ export default function App() {
 
   return (
     <Background active={active}>
-      <Header active={active} setactive={setactive} />
-      <BurgerMenu active={active} planetInfo={planetInfo} />
+      <Router>
+        <Header active={active} setactive={setactive} />
+        <BurgerMenu active={active} planetInfo={planetInfo} />
+        <Routes>
+          <Route
+            path="mercury/*"
+            element={<Mercury planetInfo={planetInfo} />}
+          ></Route>
+        </Routes>
+      </Router>
     </Background>
   );
 }
@@ -35,4 +45,7 @@ const Background = styled.div<{ active: boolean }>`
   width: 100%;
   min-height: 100vh;
   max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
