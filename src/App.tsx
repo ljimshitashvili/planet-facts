@@ -1,7 +1,20 @@
 import { useState } from "react";
+import styled from "styled-components";
 
-function App() {
-  return <></>;
+import Header from "./components/Header";
+
+import bgImage from "./assets/background-stars.svg";
+
+export default function App() {
+  return (
+    <Background>
+      <Header />
+    </Background>
+  );
 }
 
-export default App;
+const Background = styled.div`
+  background-image: url(${bgImage});
+  width: 100%;
+  min-height: 100vh;
+`;
