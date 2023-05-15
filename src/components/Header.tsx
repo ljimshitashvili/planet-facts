@@ -16,6 +16,7 @@ export default function Header({ setactive, active }: Props) {
     <Background active={active} setactive={setactive}>
       <h1>THE PLANETS</h1>
       <img src={burgerIcon} alt="Burger Menu" onClick={() => handleclick()} />
+      <hr />
     </Background>
   );
 }
@@ -38,6 +39,14 @@ const Background = styled.div<Props>`
     color: #ffffff;
   }
 
-  img {
+  hr {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.2;
+    border: none;
+    bottom: 0;
+    left: 0;
   }
 `;
