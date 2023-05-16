@@ -56,9 +56,9 @@ const Container = styled.div`
   padding: 0 24px;
 
   img {
-    width: 111px;
-    height: 111px;
-    margin-top: 95px;
+    width: 173px;
+    height: 173px;
+    margin-top: 64px;
   }
 
   h1 {

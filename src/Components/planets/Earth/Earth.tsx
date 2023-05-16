@@ -61,7 +61,7 @@ const ButtonContainer = styled.div<{ path: string }>`
     position: absolute;
     width: 80px;
     height: 4px;
-    background: #419ebb;
+    background: #6d2ed5;
     bottom: 0;
     transition: all 0.2s;
     left: ${(p) =>

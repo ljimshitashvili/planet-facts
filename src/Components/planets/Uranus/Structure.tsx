@@ -56,9 +56,9 @@ const Container = styled.div`
   padding: 0 24px;
 
   img {
-    width: 111px;
-    height: 111px;
-    margin-top: 95px;
+    width: 176px;
+    height: 176px;
+    margin-top: 63px;
   }
 
   h1 {
@@ -67,7 +67,7 @@ const Container = styled.div`
     font-weight: 400;
     font-size: 40px;
     line-height: 52px;
-    margin-top: 98px;
+    margin-top: 65px;
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;

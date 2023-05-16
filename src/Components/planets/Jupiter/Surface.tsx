@@ -62,18 +62,19 @@ const Container = styled.div`
   .imgContainer {
     position: relative;
     margin: 0;
-    .img {
-      width: 111px;
-      height: 111px;
-      margin-top: 95px;
+
+    img {
+      width: 224px;
+      height: 224px;
+      margin-top: 39px;
     }
 
     .geology {
-      width: 60px;
-      height: 75px;
+      width: 65px;
+      height: 80px;
       position: absolute;
-      left: 23%;
-      top: 80%;
+      left: 36%;
+      top: 70%;
     }
   }
 
@@ -83,7 +84,7 @@ const Container = styled.div`
     font-weight: 400;
     font-size: 40px;
     line-height: 52px;
-    margin-top: 98px;
+    margin-top: 41px;
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;

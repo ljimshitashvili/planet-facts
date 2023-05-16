@@ -69,11 +69,11 @@ const Container = styled.div`
     }
 
     .geology {
-      width: 60px;
-      height: 75px;
+      width: 50px;
+      height: 60px;
       position: absolute;
-      left: 23%;
-      top: 80%;
+      left: 28%;
+      top: 90%;
     }
   }
 
