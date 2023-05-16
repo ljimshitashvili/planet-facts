@@ -13,15 +13,21 @@ import Mercury from "./components/Planets/Mercury/Mercury";
 export default function App() {
   const [active, setactive] = useState<boolean>(true);
   const [planetInfo, setPlanetInfo] = useState<PlanetTypes[] | []>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const getPlanetInfo = async () => {
       const response = await fetch("../public/data.json");
       const data = await response.json();
       setPlanetInfo(data);
+      setLoading(false);
     };
     getPlanetInfo();
   }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
   console.log(planetInfo);
 
   return (
