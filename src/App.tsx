@@ -11,6 +11,11 @@ import PlanetTypes from "./types";
 import Mercury from "./components/Planets/Mercury/Mercury";
 import Venus from "./components/Planets/Venus/Venus";
 import Earth from "./components/Planets/Earth/Earth";
+import Mars from "./components/Planets/Mars/Mars";
+import Jupiter from "./components/Planets/Jupiter/Jupiter";
+import Saturn from "./components/Planets/Saturn/Saturn";
+import Uranus from "./components/Planets/Uranus/Uranus";
+import Neptune from "./components/Planets/Neptune/Neptune";
 
 export default function App() {
   const [active, setactive] = useState<boolean>(true);
@@ -52,6 +57,26 @@ export default function App() {
           <Route
             path="earth/*"
             element={<Earth planetInfo={planetInfo} />}
+          ></Route>
+          <Route
+            path="mars/*"
+            element={<Mars planetInfo={planetInfo} />}
+          ></Route>
+          <Route
+            path="jupiter/*"
+            element={<Jupiter planetInfo={planetInfo} />}
+          ></Route>
+          <Route
+            path="saturn/*"
+            element={<Saturn planetInfo={planetInfo} />}
+          ></Route>
+          <Route
+            path="uranus/*"
+            element={<Uranus planetInfo={planetInfo} />}
+          ></Route>
+          <Route
+            path="neptune/*"
+            element={<Neptune planetInfo={planetInfo} />}
           ></Route>
         </Routes>
       </Router>
