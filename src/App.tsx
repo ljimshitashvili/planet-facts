@@ -41,7 +41,7 @@ export default function App() {
   return (
     <Background>
       <Router>
-        <Header active={active} setactive={setactive} />
+        <Header active={active} setactive={setactive} planetInfo={planetInfo} />
         <BurgerMenu
           active={active}
           planetInfo={planetInfo}
