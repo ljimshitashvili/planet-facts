@@ -8,7 +8,7 @@ import BurgerMenu from "./components/Header/BurgerMenu";
 import bgImage from "./assets/background-stars.svg";
 
 import PlanetTypes from "./types";
-import Mercury from "./components/Planets/Mercury";
+import Mercury from "./components/Planets/Mercury/Mercury";
 
 export default function App() {
   const [active, setactive] = useState<boolean>(true);
@@ -31,7 +31,7 @@ export default function App() {
         <BurgerMenu active={active} planetInfo={planetInfo} />
         <Routes>
           <Route
-            path="mercury/*"
+            path="/*"
             element={<Mercury planetInfo={planetInfo} />}
           ></Route>
         </Routes>

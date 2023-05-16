@@ -17,7 +17,7 @@ export default function BurgerMenu({ active, planetInfo }: Props) {
     <Background active={active}>
       {planetInfo?.map((planet, index) => (
         <Link
-          to={`${planet.name.toLowerCase()}/overview`}
+          to={`${planet.name === "Mercury" ? "/" : planet.name.toLowerCase()}`}
           key={index}
           className="planet"
         >

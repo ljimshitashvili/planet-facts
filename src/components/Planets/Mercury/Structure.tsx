@@ -1,26 +1,22 @@
 import styled from "styled-components";
-import PlanetIconGeo from "../../assets/geology-mercury.png";
-import PlanetIcon from "../../assets/planet-mercury.svg";
-import PlanetTypes from "../../types";
-import arrow from "../../assets/icon-source.svg";
+import PlanetIcon from "../../../assets/planet-mercury-internal.svg";
+import PlanetTypes from "../../../types";
+import arrow from "../../../assets/icon-source.svg";
 
 interface Props {
   planetInfo: PlanetTypes[];
 }
 
-export default function Surface({ planetInfo }: Props) {
+export default function Structure({ planetInfo }: Props) {
   const planet = planetInfo?.[0];
   return (
     <Container>
-      <div className="imgContainer">
-        <img className="geology" src={PlanetIconGeo} alt="Mercury" />
-        <img className="img" src={PlanetIcon} alt="Mercury" />
-      </div>
+      <img src={PlanetIcon} alt="Mercury" />
       <h1>{planet.name}</h1>
-      <p>{planet.geology.content}</p>
+      <p>{planet.structure.content}</p>
       <div>
         <h2>
-          Source: <a href={planet.geology.source}>Wikipedia</a>
+          Source: <a href={planet.structure.source}>Wikipedia</a>
         </h2>
         <img src={arrow} alt="Source Icon" />
       </div>
@@ -52,22 +48,10 @@ const Container = styled.div`
   align-items: center;
   padding: 0 24px;
 
-  .imgContainer {
-    position: relative;
-    margin: 0;
-    .img {
-      width: 111px;
-      height: 111px;
-      margin-top: 95px;
-    }
-
-    .geology {
-      width: 60px;
-      height: 75px;
-      position: absolute;
-      left: 23%;
-      top: 80%;
-    }
+  img {
+    width: 111px;
+    height: 111px;
+    margin-top: 95px;
   }
 
   h1 {

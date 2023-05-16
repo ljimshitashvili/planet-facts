@@ -1,22 +1,22 @@
 import styled from "styled-components";
-import PlanetIcon from "../../assets/planet-mercury-internal.svg";
-import PlanetTypes from "../../types";
-import arrow from "../../assets/icon-source.svg";
+import PlanetIcon from "../../../assets/planet-mercury.svg";
+import PlanetTypes from "../../../types";
+import arrow from "../../../assets/icon-source.svg";
 
 interface Props {
   planetInfo: PlanetTypes[];
 }
 
-export default function Structure({ planetInfo }: Props) {
+export default function Overview({ planetInfo }: Props) {
   const planet = planetInfo?.[0];
   return (
     <Container>
       <img src={PlanetIcon} alt="Mercury" />
       <h1>{planet.name}</h1>
-      <p>{planet.structure.content}</p>
+      <p>{planet.overview.content}</p>
       <div>
         <h2>
-          Source: <a href={planet.structure.source}>Wikipedia</a>
+          Source: <a href={planet.overview.source}>Wikipedia</a>
         </h2>
         <img src={arrow} alt="Source Icon" />
       </div>
