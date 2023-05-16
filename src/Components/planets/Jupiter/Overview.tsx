@@ -166,9 +166,9 @@ const Container = styled.div`
     max-width: 768px;
 
     img {
-      width: 285px;
-      height: 285px;
-      margin-top: 96px;
+      width: 369px;
+      height: 369px;
+      margin-top: 54px;
       align-self: center;
     }
 
@@ -213,12 +213,12 @@ const Container = styled.div`
     max-width: 1440px;
 
     img {
-      width: 450px;
-      height: 450px;
+      width: 582px;
+      height: 582px;
       margin: 0;
       position: absolute;
-      top: 162px;
-      right: 50%;
+      top: 96px;
+      right: 45%;
     }
 
     h1 {

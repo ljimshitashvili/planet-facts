@@ -187,15 +187,15 @@ const Container = styled.div`
       align-self: center;
 
       .img {
-        width: 285px;
-        height: 285px;
-        margin-top: 96px;
+        width: 369px;
+        height: 369px;
+        margin-top: 57px;
         align-self: center;
       }
 
       .geology {
-        width: 65px;
-        height: 75px;
+        width: 85px;
+        height: 100px;
         position: absolute;
         left: 39%;
         top: 90%;
@@ -243,17 +243,17 @@ const Container = styled.div`
     position: relative;
 
     .imgContainer {
-      width: 450px;
-      height: 450px;
+      width: 582px;
+      height: 582px;
       position: absolute;
       margin: 0;
-      right: 50%;
-      top: 162px;
+      top: 96px;
+      right: 45%;
       align-self: center;
 
       .img {
-        width: 450px;
-        height: 450px;
+        width: 582px;
+        height: 582px;
         margin-top: 0;
       }
 
@@ -261,7 +261,7 @@ const Container = styled.div`
         width: 163px;
         height: 199px;
         position: absolute;
-        left: 32%;
+        left: 36%;
         top: 70%;
       }
     }
