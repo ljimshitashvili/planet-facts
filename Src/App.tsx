@@ -2,20 +2,20 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header/Header";
-import BurgerMenu from "./components/Header/BurgerMenu";
+import Header from "./Components/Header/Header";
+import BurgerMenu from "./Components/Header/BurgerMenu";
 
 import bgImage from "./assets/background-stars.svg";
 
 import PlanetTypes from "./types";
-import Mercury from "./components/Planets/Mercury/Mercury";
-import Venus from "./components/Planets/Venus/Venus";
-import Earth from "./components/Planets/Earth/Earth";
-import Mars from "./components/Planets/Mars/Mars";
-import Jupiter from "./components/Planets/Jupiter/Jupiter";
-import Saturn from "./components/Planets/Saturn/Saturn";
-import Uranus from "./components/Planets/Uranus/Uranus";
-import Neptune from "./components/Planets/Neptune/Neptune";
+import Mercury from "./Components/planets/Mercury/Mercury";
+import Venus from "./Components/planets/venus/Venus";
+import Earth from "./Components/planets/Earth/Earth";
+import Mars from "./Components/planets/mars/Mars";
+import Jupiter from "./Components/planets/Jupiter/Jupiter";
+import Saturn from "./Components/planets/Saturn/Saturn";
+import Uranus from "./Components/planets/Uranus/Uranus";
+import Neptune from "./Components/planets/Neptune/Neptune";
 
 export default function App() {
   const [active, setactive] = useState<boolean>(true);
