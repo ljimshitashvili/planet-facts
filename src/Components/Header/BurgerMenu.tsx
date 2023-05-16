@@ -51,7 +51,7 @@ const Background = styled.div<Props>`
   transition: all 0.2s;
   background: #070724;
   flex: 1;
-  height: 100%;
+  height: 93%;
   z-index: 1;
 
   .planet {

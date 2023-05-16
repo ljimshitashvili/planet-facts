@@ -39,7 +39,7 @@ export default function App() {
   }
 
   return (
-    <Background>
+    <Background active={active}>
       <Router>
         <Header active={active} setactive={setactive} planetInfo={planetInfo} />
         <BurgerMenu
@@ -86,7 +86,7 @@ export default function App() {
   );
 }
 
-const Background = styled.div`
+const Background = styled.div<{ active: boolean }>`
   background-image: url(${bgImage});
   width: 100%;
   min-height: 100vh;
@@ -94,4 +94,6 @@ const Background = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #070724;
+  height: ${(p) => (p.active ? "" : "100vh")};
+  overflow-y: ${(p) => (p.active ? "none" : "hidden")};
 `;
