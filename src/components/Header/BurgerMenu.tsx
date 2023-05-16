@@ -81,7 +81,7 @@ const Background = styled.div<Props>`
 
 const Hr = styled.hr<{ name: string }>`
   position: absolute;
-  width: 327px;
+  width: 90%;
   border: none;
   height: 1px;
   background: #ffffff;

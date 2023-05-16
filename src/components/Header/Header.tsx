@@ -28,6 +28,7 @@ const Background = styled.div<Props>`
   padding: 16px 24px;
   position: relative;
   width: 100%;
+  max-width: 375px;
 
   h1 {
     font-family: "Antonio";

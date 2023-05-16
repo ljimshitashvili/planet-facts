@@ -44,6 +44,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 375px;
 `;
 
 const ButtonContainer = styled.div<{ path: string }>`

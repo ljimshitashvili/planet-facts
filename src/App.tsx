@@ -31,7 +31,7 @@ export default function App() {
   console.log(planetInfo);
 
   return (
-    <Background active={active}>
+    <Background>
       <Router>
         <Header active={active} setactive={setactive} />
         <BurgerMenu active={active} planetInfo={planetInfo} />
@@ -46,12 +46,12 @@ export default function App() {
   );
 }
 
-const Background = styled.div<{ active: boolean }>`
+const Background = styled.div`
   background-image: url(${bgImage});
   width: 100%;
   min-height: 100vh;
-  max-width: 375px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #070724;
 `;
