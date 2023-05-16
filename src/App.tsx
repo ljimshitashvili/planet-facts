@@ -9,6 +9,7 @@ import bgImage from "./assets/background-stars.svg";
 
 import PlanetTypes from "./types";
 import Mercury from "./components/Planets/Mercury/Mercury";
+import Venus from "./components/Planets/Venus/Venus";
 
 export default function App() {
   const [active, setactive] = useState<boolean>(true);
@@ -28,7 +29,6 @@ export default function App() {
   if (loading) {
     return <div>Loading...</div>;
   }
-  console.log(planetInfo);
 
   return (
     <Background>
@@ -39,6 +39,10 @@ export default function App() {
           <Route
             path="/*"
             element={<Mercury planetInfo={planetInfo} />}
+          ></Route>
+          <Route
+            path="venus/*"
+            element={<Venus planetInfo={planetInfo} />}
           ></Route>
         </Routes>
       </Router>
