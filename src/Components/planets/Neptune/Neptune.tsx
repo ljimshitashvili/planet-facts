@@ -199,5 +199,26 @@ const ButtonContainer = styled.div<{ path: string }>`
       background-color: ${(p) =>
         p.path.includes("surface") ? "#2D68F0" : "transparent"};
     }
+
+    .over:hover {
+      ${(p) =>
+        p.path === "/neptune"
+          ? ""
+          : "background-color: rgba(216, 216, 216, 0.2)"};
+    }
+
+    .struc:hover {
+      ${(p) =>
+        p.path.includes("structure")
+          ? ""
+          : "background-color: rgba(216, 216, 216, 0.2)"};
+    }
+
+    .surf:hover {
+      ${(p) =>
+        p.path.includes("surface")
+          ? ""
+          : "background-color: rgba(216, 216, 216, 0.2)"};
+    }
   }
 `;

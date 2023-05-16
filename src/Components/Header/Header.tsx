@@ -107,6 +107,10 @@ const Background = styled.div<Props>`
 const ButtonContainer = styled.div`
   display: none;
 
+  .shadow {
+    display: none;
+  }
+
   @media (min-width: 768px) {
     display: flex;
     width: 100%;
@@ -132,6 +136,7 @@ const ButtonContainer = styled.div`
     justify-content: end;
     align-items: center;
     gap: 33px;
+    position: relative;
 
     a {
       text-decoration: none;
@@ -143,6 +148,11 @@ const ButtonContainer = styled.div`
       letter-spacing: 1px;
       text-transform: uppercase;
       color: #ffffff;
+      opacity: 0.75;
+    }
+
+    a:hover {
+      opacity: 1;
     }
   }
 `;
