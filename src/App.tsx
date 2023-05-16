@@ -10,6 +10,7 @@ import bgImage from "./assets/background-stars.svg";
 import PlanetTypes from "./types";
 import Mercury from "./components/Planets/Mercury/Mercury";
 import Venus from "./components/Planets/Venus/Venus";
+import Earth from "./components/Planets/Earth/Earth";
 
 export default function App() {
   const [active, setactive] = useState<boolean>(true);
@@ -34,7 +35,11 @@ export default function App() {
     <Background>
       <Router>
         <Header active={active} setactive={setactive} />
-        <BurgerMenu active={active} planetInfo={planetInfo} />
+        <BurgerMenu
+          active={active}
+          planetInfo={planetInfo}
+          setactive={setactive}
+        />
         <Routes>
           <Route
             path="/*"
@@ -43,6 +48,10 @@ export default function App() {
           <Route
             path="venus/*"
             element={<Venus planetInfo={planetInfo} />}
+          ></Route>
+          <Route
+            path="earth/*"
+            element={<Earth planetInfo={planetInfo} />}
           ></Route>
         </Routes>
       </Router>

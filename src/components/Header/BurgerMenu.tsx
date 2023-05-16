@@ -10,16 +10,21 @@ interface Props {
   planetInfo?: PlanetTypes[];
   key?: number;
   source?: PlanetTypes;
+  setactive: (active: boolean) => void;
 }
 
-export default function BurgerMenu({ active, planetInfo }: Props) {
+export default function BurgerMenu({ active, planetInfo, setactive }: Props) {
+  const handleClick = () => {
+    setactive(!active);
+  };
   return (
-    <Background active={active}>
+    <Background active={active} setactive={setactive}>
       {planetInfo?.map((planet, index) => (
         <Link
           to={planet.name === "Mercury" ? "/" : planet.name.toLowerCase()}
           key={index}
           className="planet"
+          onClick={() => handleClick()}
         >
           <div>
             <Circle className="circle" name={planet.name} />
