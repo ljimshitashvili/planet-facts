@@ -2,12 +2,19 @@ import styled from "styled-components";
 import PlanetIcon from "../../../assets/planet-mercury-internal.svg";
 import PlanetTypes from "../../../types";
 import arrow from "../../../assets/icon-source.svg";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 interface Props {
   planetInfo: PlanetTypes[];
+  setpath: (path: string) => void;
 }
 
-export default function Structure({ planetInfo }: Props) {
+export default function Structure({ planetInfo, setpath }: Props) {
+  const location = useLocation().pathname;
+  useEffect(() => {
+    setpath(location);
+  }, [location]);
   const planet = planetInfo?.[0];
   return (
     <Container>

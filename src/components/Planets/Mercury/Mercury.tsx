@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import Overview from "./Overview";
 import PlanetTypes from "../../../types";
@@ -10,22 +11,28 @@ interface Props {
 }
 
 export default function Mercury({ planetInfo }: Props) {
+  const [path, setpath] = useState<string>("");
+
   return (
     <Container>
-      <ButtonContainer>
+      <ButtonContainer path={path}>
         <Link to="/">overview</Link>
         <Link to="structure">structure</Link>
         <Link to="surface">surface</Link>
+        <div className="slider"></div>
       </ButtonContainer>
       <Routes>
-        <Route path="/" element={<Overview planetInfo={planetInfo} />}></Route>
+        <Route
+          path="/"
+          element={<Overview planetInfo={planetInfo} setpath={setpath} />}
+        ></Route>
         <Route
           path="structure"
-          element={<Structure planetInfo={planetInfo} />}
+          element={<Structure planetInfo={planetInfo} setpath={setpath} />}
         ></Route>
         <Route
           path="surface"
-          element={<Surface planetInfo={planetInfo} />}
+          element={<Surface planetInfo={planetInfo} setpath={setpath} />}
         ></Route>
       </Routes>
     </Container>
@@ -39,13 +46,32 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled.div<{ path: string }>`
   width: 100%;
   max-width: 375px;
   padding: 20px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+
+  .slider {
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: #419ebb;
+    bottom: 0;
+    transition: all 0.2s;
+    left: ${(p) =>
+      p.path === "/"
+        ? "15px"
+        : p.path === "/structure"
+        ? "150px"
+        : p.path === "/surface"
+        ? "290px"
+        : ""};
+  }
 
   a {
     text-decoration: none;
