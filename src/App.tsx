@@ -24,7 +24,9 @@ export default function App() {
 
   useEffect(() => {
     const getPlanetInfo = async () => {
-      const response = await fetch("../public/data.json");
+      const response = await fetch(
+        "https://raw.githubusercontent.com/ljimshitashvili/planet-facts/master/public/data.json"
+      );
       const data = await response.json();
       setPlanetInfo(data);
       setLoading(false);
