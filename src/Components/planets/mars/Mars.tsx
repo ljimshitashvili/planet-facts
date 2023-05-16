@@ -17,13 +17,13 @@ export default function Mars({ planetInfo }: Props) {
     <Container>
       <ButtonContainer path={path}>
         <Link to="" className="over">
-          overview
+          <span>01</span>overview
         </Link>
         <Link to="structure" className="struc">
-          structure
+          <span>02</span>structure
         </Link>
         <Link to="surface" className="surf">
-          surface
+          <span>03</span>surface
         </Link>
         <div className="slider"></div>
       </ButtonContainer>
@@ -77,7 +77,7 @@ const ButtonContainer = styled.div<{ path: string }>`
     position: absolute;
     width: 80px;
     height: 4px;
-    background: #6d2ed5;
+    background: #d14c32;
     bottom: 0;
     transition: all 0.2s;
     left: ${(p) =>
@@ -110,7 +110,7 @@ const ButtonContainer = styled.div<{ path: string }>`
   @media (min-width: 768px) {
     position: absolute;
     right: 0;
-    top: 480px;
+    top: 516px;
     flex-direction: column;
     border: none;
     gap: 16px;
@@ -152,17 +152,17 @@ const ButtonContainer = styled.div<{ path: string }>`
 
     .over {
       background-color: ${(p) =>
-        p.path === "/mars" ? "#6D2ED5" : "transparent"};
+        p.path === "/mars" ? "#D14C32" : "transparent"};
     }
 
     .struc {
       background-color: ${(p) =>
-        p.path.includes("structure") ? "#6D2ED5" : "transparent"};
+        p.path.includes("structure") ? "#D14C32" : "transparent"};
     }
 
     .surf {
       background-color: ${(p) =>
-        p.path.includes("surface") ? "#6D2ED5" : "transparent"};
+        p.path.includes("surface") ? "#D14C32" : "transparent"};
     }
   }
 
@@ -187,17 +187,17 @@ const ButtonContainer = styled.div<{ path: string }>`
 
     .over {
       background-color: ${(p) =>
-        p.path === "/mars" ? "#419EBB" : "transparent"};
+        p.path === "/mars" ? "#D14C32" : "transparent"};
     }
 
     .struc {
       background-color: ${(p) =>
-        p.path.includes("structure") ? "#419EBB" : "transparent"};
+        p.path.includes("structure") ? "#D14C32" : "transparent"};
     }
 
     .surf {
       background-color: ${(p) =>
-        p.path.includes("surface") ? "#419EBB" : "transparent"};
+        p.path.includes("surface") ? "#D14C32" : "transparent"};
     }
   }
 `;

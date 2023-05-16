@@ -77,7 +77,7 @@ const ButtonContainer = styled.div<{ path: string }>`
     position: absolute;
     width: 80px;
     height: 4px;
-    background: #6d2ed5;
+    background: #d83a34;
     bottom: 0;
     transition: all 0.2s;
     left: ${(p) =>
@@ -152,17 +152,17 @@ const ButtonContainer = styled.div<{ path: string }>`
 
     .over {
       background-color: ${(p) =>
-        p.path === "/jupiter" ? "#6D2ED5" : "transparent"};
+        p.path === "/jupiter" ? "#D83A34" : "transparent"};
     }
 
     .struc {
       background-color: ${(p) =>
-        p.path.includes("structure") ? "#6D2ED5" : "transparent"};
+        p.path.includes("structure") ? "#D83A34" : "transparent"};
     }
 
     .surf {
       background-color: ${(p) =>
-        p.path.includes("surface") ? "#6D2ED5" : "transparent"};
+        p.path.includes("surface") ? "#D83A34" : "transparent"};
     }
   }
 
@@ -187,17 +187,17 @@ const ButtonContainer = styled.div<{ path: string }>`
 
     .over {
       background-color: ${(p) =>
-        p.path === "/jupiter" ? "#419EBB" : "transparent"};
+        p.path === "/jupiter" ? "#D83A34" : "transparent"};
     }
 
     .struc {
       background-color: ${(p) =>
-        p.path.includes("structure") ? "#419EBB" : "transparent"};
+        p.path.includes("structure") ? "#D83A34" : "transparent"};
     }
 
     .surf {
       background-color: ${(p) =>
-        p.path.includes("surface") ? "#419EBB" : "transparent"};
+        p.path.includes("surface") ? "#D83A34" : "transparent"};
     }
   }
 `;

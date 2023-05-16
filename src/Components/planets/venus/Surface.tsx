@@ -58,23 +58,25 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 24px;
+  width: 100%;
+  max-width: 375px;
 
   .imgContainer {
     position: relative;
     margin: 0;
 
-    img {
-      width: 154px;
-      height: 154px;
-      margin-top: 74px;
+    .img {
+      width: 173px;
+      height: 173px;
+      margin-top: 64px;
     }
 
     .geology {
-      width: 60px;
+      width: 65px;
       height: 75px;
       position: absolute;
       left: 31%;
-      top: 50%;
+      top: 80%;
     }
   }
 
@@ -170,6 +172,146 @@ const Container = styled.div`
         letter-spacing: -0.75px;
         text-transform: uppercase;
         color: #ffffff;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 39px;
+    align-items: start;
+    max-width: 768px;
+
+    .imgContainer {
+      position: relative;
+      margin: 0;
+      align-self: center;
+
+      .img {
+        width: 253px;
+        height: 253px;
+        margin-top: 112px;
+        align-self: center;
+      }
+
+      .geology {
+        width: 65px;
+        height: 75px;
+        position: absolute;
+        left: 38%;
+        top: 90%;
+      }
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 62px;
+      margin-top: 95px;
+      text-align: left;
+    }
+
+    p {
+      text-align: left;
+      max-width: 340px;
+      margin-top: 24px;
+    }
+
+    .infosContainer {
+      flex-direction: row;
+      gap: 11px;
+      margin-top: 27px;
+
+      .infos {
+        padding: 16px;
+        flex-direction: column;
+        justify-content: unset;
+        gap: 6px;
+        align-items: start;
+        margin: 0;
+
+        h4 {
+          font-size: 24px;
+          line-height: 31px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 100px;
+    align-items: end;
+    max-width: 1440px;
+    position: relative;
+
+    .imgContainer {
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      margin: 0;
+      right: 50%;
+      top: 187px;
+      align-self: center;
+
+      .img {
+        width: 400px;
+        height: 400px;
+        margin-top: 0;
+      }
+
+      .geology {
+        width: 163px;
+        height: 199px;
+        position: absolute;
+        left: 30%;
+        top: 70%;
+      }
+    }
+
+    h1 {
+      font-size: 80px;
+      line-height: 103px;
+      margin-top: 126px;
+      width: 350px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 25px;
+      max-width: 350px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      height: 150px;
+    }
+
+    div {
+      width: 350px;
+      margin-top: 24px;
+
+      img {
+        position: unset;
+      }
+
+      h2 {
+        font-size: 14px;
+      }
+    }
+
+    .infosContainer {
+      gap: 30px;
+      justify-content: space-between;
+      margin-top: 300px;
+
+      .infos {
+        padding: 20px 0 20px 23px;
+        gap: 4px;
+
+        h3 {
+          font-size: 11px;
+          line-height: 25px;
+        }
+
+        h4 {
+          font-size: 40px;
+          line-height: 52px;
+        }
       }
     }
   }

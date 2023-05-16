@@ -187,17 +187,17 @@ const ButtonContainer = styled.div<{ path: string }>`
 
     .over {
       background-color: ${(p) =>
-        p.path === "/earth" ? "#419EBB" : "transparent"};
+        p.path === "/earth" ? "#6D2ED5" : "transparent"};
     }
 
     .struc {
       background-color: ${(p) =>
-        p.path.includes("structure") ? "#419EBB" : "transparent"};
+        p.path.includes("structure") ? "#6D2ED5" : "transparent"};
     }
 
     .surf {
       background-color: ${(p) =>
-        p.path.includes("surface") ? "#419EBB" : "transparent"};
+        p.path.includes("surface") ? "#6D2ED5" : "transparent"};
     }
   }
 `;

@@ -55,6 +55,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 24px;
+  width: 100%;
+  max-width: 375px;
 
   img {
     width: 173px;
@@ -68,7 +70,7 @@ const Container = styled.div`
     font-weight: 400;
     font-size: 40px;
     line-height: 52px;
-    margin-top: 67px;
+    margin-top: 98px;
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
@@ -154,6 +156,117 @@ const Container = styled.div`
         letter-spacing: -0.75px;
         text-transform: uppercase;
         color: #ffffff;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 39px;
+    align-items: start;
+    max-width: 768px;
+
+    img {
+      width: 285px;
+      height: 285px;
+      margin-top: 96px;
+      align-self: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 62px;
+      margin-top: 79px;
+      text-align: left;
+    }
+
+    p {
+      text-align: left;
+      max-width: 340px;
+      margin-top: 24px;
+    }
+
+    .infosContainer {
+      flex-direction: row;
+      gap: 11px;
+      margin-top: 27px;
+
+      .infos {
+        padding: 16px;
+        flex-direction: column;
+        justify-content: unset;
+        gap: 6px;
+        align-items: start;
+        margin: 0;
+
+        h4 {
+          font-size: 24px;
+          line-height: 31px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 100px;
+    align-items: end;
+    max-width: 1440px;
+
+    img {
+      width: 450px;
+      height: 450px;
+      margin: 0;
+      position: absolute;
+      top: 162px;
+      right: 50%;
+    }
+
+    h1 {
+      font-size: 80px;
+      line-height: 103px;
+      margin-top: 126px;
+      width: 350px;
+    }
+
+    p {
+      height: 150px;
+      font-size: 14px;
+      line-height: 25px;
+      max-width: 350px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    div {
+      width: 350px;
+      margin-top: 24px;
+
+      img {
+        position: unset;
+      }
+
+      h2 {
+        font-size: 14px;
+      }
+    }
+
+    .infosContainer {
+      gap: 30px;
+      justify-content: space-between;
+      margin-top: 300px;
+
+      .infos {
+        padding: 20px 0 20px 23px;
+        gap: 4px;
+
+        h3 {
+          font-size: 11px;
+          line-height: 25px;
+        }
+
+        h4 {
+          font-size: 40px;
+          line-height: 52px;
+        }
       }
     }
   }

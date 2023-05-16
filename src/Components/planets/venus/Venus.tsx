@@ -16,9 +16,15 @@ export default function Venus({ planetInfo }: Props) {
   return (
     <Container>
       <ButtonContainer path={path}>
-        <Link to="">overview</Link>
-        <Link to="structure">structure</Link>
-        <Link to="surface">surface</Link>
+        <Link to="" className="over">
+          <span>01</span>overview
+        </Link>
+        <Link to="structure" className="struc">
+          <span>02</span>structure
+        </Link>
+        <Link to="surface" className="surf">
+          <span>03</span>surface
+        </Link>
         <div className="slider"></div>
       </ButtonContainer>
       <Routes>
@@ -45,6 +51,16 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   max-width: 375px;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    position: relative;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1440px;
+    position: relative;
+  }
 `;
 
 const ButtonContainer = styled.div<{ path: string }>`
@@ -85,5 +101,103 @@ const ButtonContainer = styled.div<{ path: string }>`
     letter-spacing: 1.92857px;
     text-transform: uppercase;
     color: #ffffff;
+
+    span {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    position: absolute;
+    right: 0;
+    top: 516px;
+    flex-direction: column;
+    border: none;
+    gap: 16px;
+
+    .slider {
+      display: none;
+    }
+
+    a {
+      width: 281px;
+      height: 40px;
+      padding: 8px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      gap: 17px;
+      align-items: center;
+      font-family: "League Spartan";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 9px;
+      line-height: 25px;
+      letter-spacing: 1.92857px;
+      text-transform: uppercase;
+      color: #ffffff;
+
+      span {
+        display: block;
+        opacity: 0.5;
+        font-family: "League Spartan";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 25px;
+        letter-spacing: 1.92857px;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+    }
+
+    .over {
+      background-color: ${(p) =>
+        p.path === "/venus" ? "#EDA249" : "transparent"};
+    }
+
+    .struc {
+      background-color: ${(p) =>
+        p.path.includes("structure") ? "#EDA249" : "transparent"};
+    }
+
+    .surf {
+      background-color: ${(p) =>
+        p.path.includes("surface") ? "#EDA249" : "transparent"};
+    }
+  }
+
+  @media (min-width: 1024px) {
+    top: 450px;
+    right: 100px;
+    z-index: 1;
+
+    a {
+      width: 350px;
+      height: 48px;
+      padding: 12px 28px;
+      gap: 28px;
+      font-size: 12px;
+      letter-spacing: 2.57143px;
+
+      span {
+        font-size: 12px;
+        letter-spacing: 2.57143px;
+      }
+    }
+
+    .over {
+      background-color: ${(p) =>
+        p.path === "/venus" ? "#EDA249" : "transparent"};
+    }
+
+    .struc {
+      background-color: ${(p) =>
+        p.path.includes("structure") ? "#EDA249" : "transparent"};
+    }
+
+    .surf {
+      background-color: ${(p) =>
+        p.path.includes("surface") ? "#EDA249" : "transparent"};
+    }
   }
 `;

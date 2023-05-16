@@ -205,7 +205,7 @@ const Container = styled.div`
     h1 {
       font-size: 48px;
       line-height: 62px;
-      margin-top: 79px;
+      margin-top: 37px;
       text-align: left;
     }
 
